@@ -222,7 +222,7 @@ SHIELD:UNINITIALIZED=kyria_left
 WEST_PYTHON:UNINITIALIZED=/usr/bin/python3
 
 //No help, variable specified on the command line.
-ZMK_CONFIG:UNINITIALIZED=\wsl$\Ubuntu-18.04\home\laujonat\hakkei\zmk-config\config
+ZMK_CONFIG:UNINITIALIZED=/mnt/c/home/laujonat/hakkei/zmk-config/config
 
 
 ########################
