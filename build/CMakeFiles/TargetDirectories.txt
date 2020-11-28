@@ -1,2 +1,0 @@
-/home/laujonat/hakkei/zmk-config/build/CMakeFiles/rebuild_cache.dir
-/home/laujonat/hakkei/zmk-config/build/CMakeFiles/edit_cache.dir
