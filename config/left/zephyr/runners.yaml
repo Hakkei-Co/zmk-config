@@ -1,0 +1,33 @@
+# Available runners configured by board.cmake.
+runners:
+- dfu-util
+- jlink
+
+# Default flash runner if --runner is not given.
+flash-runner: dfu-util
+
+# Default debug runner if --runner is not given.
+debug-runner: jlink
+
+# Common runner configuration values.
+config:
+  board_dir: /home/laujonat/hakkei/ryval-zmk/app/boards/arm/proton_c
+  # Build outputs:
+  elf_file: zmk.elf
+  hex_file: zmk.hex
+  bin_file: zmk.bin
+  # Host tools:
+  gdb: /home/laujonat/.local/zephyr-sdk-0.11.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb
+  openocd: /home/laujonat/.local/zephyr-sdk-0.11.4/sysroots/x86_64-pokysdk-linux/usr/bin/openocd
+  openocd_search: /home/laujonat/.local/zephyr-sdk-0.11.4/sysroots/x86_64-pokysdk-linux/usr/share/openocd/scripts
+
+# Runner specific arguments
+args:
+  dfu-util:
+    - --pid=0483:df11
+    - --alt=0
+    - --dfuse
+  jlink:
+    - --dt-flash=y
+    - --device=STM32F303CC
+    - --speed=4000
